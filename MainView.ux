@@ -1,0 +1,16 @@
+<App>
+	<JavaScript>
+		var Localization = require("Localization.js");
+		function clik(){
+			Localization.setLocale("nb-NO");
+		}
+		module.exports = {loc: Localization.loc, clik};
+	</JavaScript>
+	<ClientPanel>
+		<StackPanel>
+			<Text Value="{loc.text1}"/>
+			<TextBox PlaceholderText="{loc.color}"/>
+			<Button Dock="Bottom" Text="Switch to Norwegian" Clicked="{clik}"/>
+		</StackPanel>
+	</ClientPanel>
+</App>
