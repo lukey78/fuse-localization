@@ -23,7 +23,7 @@ public sealed class DeviceLocale : NativeModule {
     
     public DeviceLocale() : base() {
         if (_instance != null) return;
-        Resource.SetGlobalKey(_instance = this, "DeviceLocale");
+        Uno.UX.Resource.SetGlobalKey(_instance = this, "DeviceLocale");
 
         AddMember(new NativeProperty< string, object >("locale", GetCurrentLocale));
     }
